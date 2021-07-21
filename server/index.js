@@ -1,5 +1,6 @@
 var net = require("net");
 var fs = require("fs");
+const prompt = require("prompt-sync")({ sigint: true });
 
 // creates the server
 var server = net.createServer();
@@ -22,6 +23,15 @@ server.on("connection", function (socket) {
     // whereas destroy kills the socket immediately irrespective of whether any i/o operation is goin on or not...force destry takes place
     console.log("Socket timed out");
   });
+
+  // const pressure = prompt("Are you ready?");
+  // let run = true;
+  // while (run) {
+  //   //console.log(`${pressure}`);
+  //   const pressure = prompt("Enter data:");
+  //   socket.write(pressure);
+  //   if (pressure == "Q") run = false;
+  // }
 
   socket.on("connect", function (data) {
     console.log("Connect sent from client");

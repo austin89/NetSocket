@@ -4,5 +4,7 @@
   "main": "index.js",
   "author": "AC",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
